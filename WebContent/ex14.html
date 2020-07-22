@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li data-no="1" data-userId="aaa" id="first" class="red">첫번째 아이템입니다.</li>
+		<li data-no="2" data-userId="bbb" id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li data-no="3" data-userId="ccc" id="third" class="del">세번째 아이템입니다.</li>
+		<li data-no="4" data-userId="ddd"><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+
+<script type="text/javascript">
+	
+	/*
+	$("li strong").on("click", function(){ 	//li strong 전체 클릭됨.
+		console.log("li 클릭");
+		var $this = $(this);
+		var userId = $this.data("userid"); //이름 반드시 소문자로.
+		console.log(userId);
+	
+	});
+	*/
+	
+	
+	$("[class]").on("click", function(){ //class 아이디만 클릭.
+		console.log("li 클릭");
+		//$(this).text("12345"); 아래와 결과 같음
+		var $this = $(this);
+		
+		//텍스트 가져오기
+		//$this.text("abcde");
+		
+		//속성 값 가져오기
+		//var attr = $this.attr("id"); //본래 있는 속성은 attr로 찾기사용.
+		//console.log(attr);
+		
+		var no = $this.data("no"); //임의로 만든 속성은 data로 찾기사용.
+		console.log(no);
+		
+		var text = $this.text(); 
+		console.log(text);
+		
+	});
+		
+
+</script>
+
+</html>

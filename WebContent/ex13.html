@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<input id="btn" type="button" VALUE="js테스트버튼" />
+		<h1 id="display">이름출력영역</h1>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	//버튼 찾기
+	//버튼 클릭 이벤트 찾기
+	//클릭했을 때 기능정의
+	//변경할 부분을 찾기
+	//값 변경
+	
+	$("#btn").on("click", function(){
+		console.log("클릭");
+		//$("#display").html("<font color:red>황일영</font>"); //태그를 가려야함.
+		//$("#display").text("<font color:red>황일영</font>");//.text의 경우 태그도 표시됨.
+		$("#display").css("color", "red");
+		
+	});
+	
+
+
+
+
+</script>
+
+
+
+</html>
